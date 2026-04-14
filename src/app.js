@@ -3,6 +3,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 // Routes
 app.use('/auth', require('./routes/auth.routes'));
 app.use('/tasks', require('./routes/task.routes'));
